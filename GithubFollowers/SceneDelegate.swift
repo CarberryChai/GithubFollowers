@@ -59,7 +59,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 extension SceneDelegate {
     private func createTabBar() -> UITabBarController {
         let TabBar = UITabBarController()
-        UITabBar.appearance().backgroundColor = .systemBackground
+        let appearance = UITabBarAppearance()
+        appearance.backgroundEffect = UIBlurEffect(style: .systemUltraThinMaterial)
+        UITabBar.appearance().standardAppearance = appearance
+        UITabBar.appearance().scrollEdgeAppearance = appearance
         TabBar.viewControllers = [createSearchNavigationController(), createFavoritesNavigationController()]
         return TabBar
     }
