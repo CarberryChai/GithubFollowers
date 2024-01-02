@@ -15,6 +15,7 @@
 		7825399B2B427E9B00E1F973 /* FavoriteListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7825399A2B427E9B00E1F973 /* FavoriteListVC.swift */; };
 		7825399E2B42869200E1F973 /* GFButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7825399D2B42869200E1F973 /* GFButton.swift */; };
 		782539A02B42A2F800E1F973 /* GFTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7825399F2B42A2F800E1F973 /* GFTextField.swift */; };
+		782539A22B44273C00E1F973 /* FollowerListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782539A12B44273C00E1F973 /* FollowerListVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		7825399A2B427E9B00E1F973 /* FavoriteListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListVC.swift; sourceTree = "<group>"; };
 		7825399D2B42869200E1F973 /* GFButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFButton.swift; sourceTree = "<group>"; };
 		7825399F2B42A2F800E1F973 /* GFTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTextField.swift; sourceTree = "<group>"; };
+		782539A12B44273C00E1F973 /* FollowerListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				782539982B427E5500E1F973 /* SearchVC.swift */,
+				782539A12B44273C00E1F973 /* FollowerListVC.swift */,
 				7825399A2B427E9B00E1F973 /* FavoriteListVC.swift */,
 			);
 			path = Screens;
@@ -164,6 +167,7 @@
 				782539882B42592F00E1F973 /* ViewController.swift in Sources */,
 				782539842B42592F00E1F973 /* AppDelegate.swift in Sources */,
 				782539862B42592F00E1F973 /* SceneDelegate.swift in Sources */,
+				782539A22B44273C00E1F973 /* FollowerListVC.swift in Sources */,
 				782539A02B42A2F800E1F973 /* GFTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

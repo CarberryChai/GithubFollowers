@@ -7,26 +7,44 @@
 
 import UIKit
 
-class SearchVC: UIViewController, UITextFieldDelegate {
+class SearchVC: UIViewController {
     let logo = UIImageView()
     let usernameTextField = GFTextField()
     let actionButton = GFButton(backgroundColor: .systemGreen, title: "Get Followers")
+
+    var isUsernameValid: Bool {
+        return !usernameTextField.text!.isEmpty
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         configureLogo()
         configureTextField()
+        configureActionButton()
+        createDismissTapGesture()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.isNavigationBarHidden = true
     }
-
 }
 
-extension SearchVC {
+extension SearchVC: UITextFieldDelegate {
+    @objc private func pushFollowerListVC() {
+        guard isUsernameValid else { return }
+        let followerListVC = FollowerListVC()
+        followerListVC.username = usernameTextField.text
+        followerListVC.title = usernameTextField.text
+        navigationController?.pushViewController(followerListVC, animated: true)
+    }
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        pushFollowerListVC()
+        return true
+    }
+
     private func configureLogo() {
         view.addSubview(logo)
         logo.translatesAutoresizingMaskIntoConstraints = false
@@ -37,7 +55,6 @@ extension SearchVC {
             logo.heightAnchor.constraint(equalToConstant: 200),
             logo.widthAnchor.constraint(equalToConstant: 200)
         ])
-
     }
 
     private func configureTextField() {
@@ -49,5 +66,21 @@ extension SearchVC {
             usernameTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50),
             usernameTextField.heightAnchor.constraint(equalToConstant: 50)
         ])
+    }
+
+    private func configureActionButton() {
+        view.addSubview(actionButton)
+        actionButton.addTarget(self, action: #selector(pushFollowerListVC), for: .touchUpInside)
+        NSLayoutConstraint.activate([
+            actionButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -50),
+            actionButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50),
+            actionButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50),
+            actionButton.heightAnchor.constraint(equalToConstant: 50)
+        ])
+    }
+
+    private func createDismissTapGesture() {
+        let tap = UITapGestureRecognizer(target: view, action: #selector(view.endEditing))
+        view.addGestureRecognizer(tap)
     }
 }
