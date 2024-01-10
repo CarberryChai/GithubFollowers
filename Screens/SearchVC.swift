@@ -33,7 +33,10 @@ class SearchVC: UIViewController {
 
 extension SearchVC: UITextFieldDelegate {
     @objc private func pushFollowerListVC() {
-        guard isUsernameValid else { return }
+        guard isUsernameValid else {
+            presentGFAlertOnMainThread(title: "Empty Username", message: "Please enter a username. We need to know who to look for 😀", buttonTitle: "OK")
+            return
+        }
         let followerListVC = FollowerListVC()
         followerListVC.username = usernameTextField.text
         followerListVC.title = usernameTextField.text

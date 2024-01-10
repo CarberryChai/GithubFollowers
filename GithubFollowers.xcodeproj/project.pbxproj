@@ -18,6 +18,10 @@
 		782539A22B44273C00E1F973 /* FollowerListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782539A12B44273C00E1F973 /* FollowerListVC.swift */; };
 		787884BC2B4E26E800BE56AA /* GFTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787884BB2B4E26E800BE56AA /* GFTitleLabel.swift */; };
 		787884BE2B4E286E00BE56AA /* GFBodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787884BD2B4E286E00BE56AA /* GFBodyLabel.swift */; };
+		787884C02B4E29CB00BE56AA /* GFAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787884BF2B4E29CB00BE56AA /* GFAlertVC.swift */; };
+		787884C32B4E31C600BE56AA /* ViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787884C22B4E31C600BE56AA /* ViewController+.swift */; };
+		787884C62B4EB69300BE56AA /* Follower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787884C52B4EB69300BE56AA /* Follower.swift */; };
+		787884C82B4EB7F800BE56AA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787884C72B4EB7F800BE56AA /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +38,10 @@
 		782539A12B44273C00E1F973 /* FollowerListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerListVC.swift; sourceTree = "<group>"; };
 		787884BB2B4E26E800BE56AA /* GFTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTitleLabel.swift; sourceTree = "<group>"; };
 		787884BD2B4E286E00BE56AA /* GFBodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFBodyLabel.swift; sourceTree = "<group>"; };
+		787884BF2B4E29CB00BE56AA /* GFAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAlertVC.swift; sourceTree = "<group>"; };
+		787884C22B4E31C600BE56AA /* ViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+.swift"; sourceTree = "<group>"; };
+		787884C52B4EB69300BE56AA /* Follower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follower.swift; sourceTree = "<group>"; };
+		787884C72B4EB7F800BE56AA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +58,8 @@
 		782539772B42592F00E1F973 = {
 			isa = PBXGroup;
 			children = (
+				787884C42B4EB68500BE56AA /* Model */,
+				787884C12B4E319D00BE56AA /* Extensions */,
 				7825399C2B42866B00E1F973 /* Components */,
 				782539972B427E1100E1F973 /* Screens */,
 				782539822B42592F00E1F973 /* GithubFollowers */,
@@ -94,8 +104,26 @@
 				7825399F2B42A2F800E1F973 /* GFTextField.swift */,
 				787884BB2B4E26E800BE56AA /* GFTitleLabel.swift */,
 				787884BD2B4E286E00BE56AA /* GFBodyLabel.swift */,
+				787884BF2B4E29CB00BE56AA /* GFAlertVC.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		787884C12B4E319D00BE56AA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				787884C22B4E31C600BE56AA /* ViewController+.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		787884C42B4EB68500BE56AA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				787884C52B4EB69300BE56AA /* Follower.swift */,
+				787884C72B4EB7F800BE56AA /* User.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,6 +200,10 @@
 				7825399E2B42869200E1F973 /* GFButton.swift in Sources */,
 				782539882B42592F00E1F973 /* ViewController.swift in Sources */,
 				782539842B42592F00E1F973 /* AppDelegate.swift in Sources */,
+				787884C02B4E29CB00BE56AA /* GFAlertVC.swift in Sources */,
+				787884C82B4EB7F800BE56AA /* User.swift in Sources */,
+				787884C32B4E31C600BE56AA /* ViewController+.swift in Sources */,
+				787884C62B4EB69300BE56AA /* Follower.swift in Sources */,
 				782539862B42592F00E1F973 /* SceneDelegate.swift in Sources */,
 				787884BC2B4E26E800BE56AA /* GFTitleLabel.swift in Sources */,
 				782539A22B44273C00E1F973 /* FollowerListVC.swift in Sources */,

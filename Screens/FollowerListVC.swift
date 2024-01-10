@@ -15,4 +15,9 @@ class FollowerListVC: UIViewController {
         view.backgroundColor = .systemBackground
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.isNavigationBarHidden = false
+    }
+
 }
