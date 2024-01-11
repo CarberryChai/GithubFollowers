@@ -10,10 +10,11 @@ import UIKit
 class FollowerListVC: UIViewController {
     var username: String!
 
-    override func viewDidLoad() {
+    override func viewDidLoad(){
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
-        NetworkManager.shared.getFollowers(for: username, page: 1) { result in
+        Task {
+            let result = await NetworkManager.shared.getFollowers(for: username, page: 1)
             switch result {
                 case .success(let followers):
                     print("followers count: \(followers.count)")
