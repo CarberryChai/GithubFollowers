@@ -13,8 +13,6 @@ class FollowerCell: UICollectionViewCell {
     let avatarImageView = GFAvatarImageView(frame: .zero)
     let usernameLabel = GFTitleLabel(textAlignment: .center, fontSize: 16)
 
-    // MARK: - Life Cycle
-
     override init(frame: CGRect) {
         super.init(frame: frame)
         configure()
@@ -25,14 +23,10 @@ class FollowerCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 
-    // MARK: - Public
-
     func set(follower: Follower) async {
         usernameLabel.text = follower.login
         await avatarImageView.downloadImage(from: follower.avatarUrl)
     }
-
-    // MARK: - Private
 
     private func configure() {
         addSubview(avatarImageView)
@@ -47,7 +41,6 @@ class FollowerCell: UICollectionViewCell {
             usernameLabel.topAnchor.constraint(equalTo: avatarImageView.bottomAnchor, constant: padding),
             usernameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: padding),
             usernameLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -padding),
-            // usernameLabel.heightAnchor.constraint(equalToConstant: 20)
             usernameLabel.heightAnchor.constraint(equalToConstant: 20)
         ])
     }
