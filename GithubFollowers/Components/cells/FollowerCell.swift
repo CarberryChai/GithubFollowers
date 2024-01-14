@@ -23,9 +23,11 @@ class FollowerCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 
-    func set(follower: Follower) async {
+    func set(follower: Follower){
         usernameLabel.text = follower.login
-        await avatarImageView.downloadImage(from: follower.avatarUrl)
+        Task {
+            await avatarImageView.downloadImage(from: follower.avatarUrl)
+        }
     }
 
     private func configure() {
